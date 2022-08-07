@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
 
 :root {
-    font-family: 'Raleway', sans-serif;
     --ft-size: 16px;
-    font-size: var(--ft-size);
-
+    
     --clr-primary: #0065FC;
     --clr-secondary: #DEEBFF;
     --clr-bg: #F2F2F2;
-
+    
     --clr-white: #FFF;
     --clr-black: #000;
+    
+    font-family: 'Raleway', sans-serif;
+    font-size: var(--ft-size);
+    color: var(--clr-black);
 }
 
 *,
@@ -386,6 +388,8 @@ p {
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, .25);
     border-radius: calc(var(--ft-size) * 1.5);
 
+    background-color: var(--clr-white);
+
     padding: calc(var(--ft-size) * .25);
     cursor: pointer;
 
@@ -429,7 +433,6 @@ p {
 .note::before {
     content: "\f005\f005\f005\f005\f005";
     color: var(--clr-bg);
-    color: black;
 }
 .note::after {
     position: absolute;
@@ -604,6 +607,7 @@ p {
     width: 22%;
 }
 .activity-card {
+    background-color: var(--clr-white);
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, .25);
     border-radius: calc(var(--ft-size) * 1.5);
     overflow: hidden;
