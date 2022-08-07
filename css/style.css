@@ -405,12 +405,18 @@ p {
     border-radius: calc(var(--ft-size) * 1.5) calc(var(--ft-size) * 1.5) 0 0;
 }
 
-.card h3,
-.card p {
+.card .card__title,
+.card .card__info {
     overflow: hidden;
     max-width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.card .card__info {
+    display: flex;
+    gap: 0 calc(var(--ft-size) * .3);
+    flex-wrap: wrap;
 }
 
 .card >:last-child {
@@ -463,7 +469,6 @@ p {
 .card:hover {
     color: var(--clr-primary);
 }
-
 
 .card.card--side {
     flex-direction: row;
@@ -748,10 +753,15 @@ footer a:hover {
 /* 
     Search bar to center on mobile 
     Filter animation
-    Why star --clr-bg don't work
+    
+    Card animation -> Scale, shadow, color.
 */
 
 /*
 don't forget to use:
 min & max (width & height)
+*/
+
+/*
+Check if section can be used 'solo'.
 */
