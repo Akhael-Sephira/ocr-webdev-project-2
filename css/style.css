@@ -406,9 +406,8 @@ p {
 }
 
 .card .card__title,
-.card .card__info {
+.card .card__info > * {
     overflow: hidden;
-    max-width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
@@ -491,7 +490,7 @@ p {
 
 
 .card.card--side >:last-child {
-    width: 60%;
+    max-width: 60%;
     position: relative;
     padding-bottom: calc(var(--ft-size) * 2);
 }
@@ -515,10 +514,11 @@ p {
     border-radius: calc(var(--ft-size) * 2);
 }
 #hostings #hostings__list {
-    flex-basis: 66%;
+    flex: 1 1 66%;
 }
 #hostings #hostings__popular {
-    flex-basis: 33%;
+    flex: 1 1 33%;
+    /* width: 33%; */
 }
 #hostings #hostings__list > h2,
 #hostings #hostings__popular > h2 {
@@ -547,7 +547,7 @@ p {
 #hostings #hostings__popular > ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     gap: calc(var(--ft-size) * 1);
     width: 100%
@@ -564,14 +564,18 @@ p {
 
 
 #hostings #hostings__list > ul > li {
-    max-width: 30%;
-    min-width: 250px;
+    flex-grow: 1;
+    flex-basis: 250px;
+}
+#hostings .card {
+    max-width: 100%;
+    min-width: 0px;
 }
 #hostings #hostings__popular > ul > li {
-    max-width: 250px;
-    min-width: 100%;
+    flex-grow: 1;
+    width: 100%;
+    max-width: calc(var(--ft-size) * 35);
 }
-
 
 @media screen and (max-width: 992px) {
     #hostings {
@@ -588,6 +592,9 @@ p {
     }
     #hostings #hostings__list {
         background-color: transparent;
+    }
+    #hostings #hostings__popular > ul {
+        justify-content: center;
     }
     #hostings #hostings__list,
     #hostings #hostings__popular {
@@ -606,16 +613,17 @@ p {
 }
 
 #activities__list {
+    --gap-size: calc(var(--ft-size) * 2);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-between;
     align-items: stretch;
-    gap: calc(var(--ft-size) * 2);
+    gap: var(--gap-size);
     height: calc(var(--ft-size) * 30);
 }
-#activities__list > *{
+#activities__list > * {
     max-width: 22%;
     width: 22%;
 }
@@ -772,4 +780,8 @@ min & max (width & height)
 
 /*
 Check if section can be used 'solo'.
+*/
+/*
+
+FIX SHADOWS
 */
