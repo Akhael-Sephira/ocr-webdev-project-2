@@ -596,7 +596,7 @@ p {
     list-style: none;
     justify-content: space-between;
     align-items: stretch;
-    gap: calc(var(--ft-size) * 1);
+    gap: calc(var(--ft-size) * 2);
     height: calc(var(--ft-size) * 30);
 }
 #activities__list > *{
@@ -745,4 +745,9 @@ footer a:hover {
     Search bar to center on mobile 
     Filter animation
     Why star --clr-bg don't work
+*/
+
+/*
+don't forget to use:
+min & max (width & height)
 */
