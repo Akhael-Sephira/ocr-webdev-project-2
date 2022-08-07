@@ -430,7 +430,15 @@ p {
     overflow: hidden;
 }
 
+.card .note {
+    --note-bg: var(--clr-bg);
+    --note-color: var(--clr-primary);    
+}
+
 .note {
+    --note-bg: grey;
+    --note-color: yellow;
+
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900;
     font-size: calc(var(--ft-size) * 1);
@@ -438,13 +446,13 @@ p {
 }
 .note::before {
     content: "\f005\f005\f005\f005\f005";
-    color: var(--clr-bg);
+    color: var(--note-bg);
 }
 .note::after {
     position: absolute;
     left: 0;
     padding: inherit;
-    color: var(--clr-primary);
+    color: var(--note-color);
 }
 .note[data-note="0"]::after {
     content: "";
