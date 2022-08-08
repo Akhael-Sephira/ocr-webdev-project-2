@@ -505,9 +505,13 @@ p {
     content: "\f005\f005\f005\f005\f005";
 }
 
+.card {
+    transition: transform .10s ease-in-out;
+}
 .card:focus,
 .card:hover {
     color: var(--clr-primary);
+    transform: scale(1.05);
 }
 
 .card.card--side {
@@ -683,9 +687,13 @@ p {
     padding: calc(var(--ft-size) * 1);
 }
 
+.activity-card {
+    transition: transform .10s ease-in-out;
+}
 .activity-card:focus,
 .activity-card:hover {
-    color: var(--clr-primary)
+    color: var(--clr-primary);
+    transform: scale(1.05);
 }
 
 #activities__list article,
@@ -803,22 +811,3 @@ footer a:hover {
     }
 }
 
-/* 
-    Search bar to center on mobile 
-    Filter animation
-    
-    Card animation -> Scale, shadow, color.
-*/
-
-/*
-don't forget to use:
-min & max (width & height)
-*/
-
-/*
-Check if section can be used 'solo'.
-*/
-/*
-
-FIX SHADOWS
-*/
