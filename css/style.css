@@ -204,7 +204,7 @@ p {
 
     margin-bottom: calc(var(--ft-size) * 2);;
 }
-#search-bar > :nth-child(1) {
+#search-bar > .search-bar__loc-btn {
     background-color: var(--clr-bg);
     width: var(--height);
 
@@ -217,7 +217,7 @@ p {
     font-size: calc(var(--height) * .4);
     cursor: pointer;
 }
-#search-bar > :nth-child(2) {
+#search-bar > .search-bar__input {
     outline: none;
     border: none;
     border-top: solid var(--clr-bg) calc(var(--ft-size) * .2);
@@ -226,7 +226,7 @@ p {
     
     font-weight: 700;
 }
-#search-bar > :nth-child(3) {
+#search-bar > .search-bar__submit-btn {
     cursor: pointer;
     border: none;
     background-color: var(--clr-primary);
@@ -238,7 +238,7 @@ p {
     border-start-end-radius: calc(var(--height) * .3);
     border-end-end-radius: calc(var(--height) * .3);
 }
-#search-bar > :nth-child(3)::before {
+#search-bar > .search-bar__submit-btn::before {
     content: "Rechercher";
 }
 
@@ -251,14 +251,14 @@ p {
         position: relative;
     }
 
-    #search-bar > :nth-child(3) {
+    #search-bar > .search-bar__submit-btn {
         width: var(--height);
         border-radius: calc(var(--height) * .3);
         position: relative;
         transform: translateX(calc(var(--height) * -.3));
     } 
 
-    #search-bar > :nth-child(3)::before {
+    #search-bar > .search-bar__submit-btn::before {
         font-family: "Font Awesome 5 Free"; 
         font-weight: 900;
         content: "\f002";
