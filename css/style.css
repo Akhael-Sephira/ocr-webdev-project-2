@@ -670,6 +670,9 @@ p {
     justify-content: flex-end;
     outline: none;
     cursor: pointer;
+
+    text-decoration: none;
+    color: inherit;
 }
 .activity-card > .activity-card__img {
     object-fit:cover;
@@ -685,6 +688,7 @@ p {
     color: var(--clr-primary)
 }
 
+#activities__list article,
 #activities__list .activity-card {
    height: 100%;
    width: 100%;
