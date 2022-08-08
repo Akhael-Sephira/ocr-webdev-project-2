@@ -412,7 +412,7 @@ p {
 .card > img {
     object-fit: cover;
     width: 100%;
-    aspect-ratio: 1.8;
+    aspect-ratio: 9 / 5;
     border-radius: calc(var(--ft-size) * 1.5) calc(var(--ft-size) * 1.5) 0 0;
 }
 
@@ -495,7 +495,7 @@ p {
 
 .card.card--side > img {
     width: 40%;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     border-radius: calc(var(--ft-size) * 1.5) 0 0 calc(var(--ft-size) * 1.5);
 }
 
