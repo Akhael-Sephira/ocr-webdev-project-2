@@ -32,7 +32,7 @@ body {
     background-color: var(--clr-white);
 }
 
-body > *:not(footer) {
+main > *:not(footer) {
     margin-left: var(--body-side-margin);
     margin-right: var(--body-side-margin);
 }
@@ -52,25 +52,35 @@ body > *:not(footer) {
 /* Type scale */
 
 h1 { 
-    
-    font-size: calc(var(--ft-size) * 1.6); 
+    --line-height: 1.2;
+    --r-ft-size: calc(var(--ft-size) * 1.6); 
+    line-height: var(--line-height);
+    font-size: var(--r-ft-size); 
     font-weight: 700;
     margin-bottom: calc(var(--ft-size) * .75);
 }
 h2 { 
-    font-size: calc(var(--ft-size) * 1.4);
+    --line-height: 1.3;
+    --r-ft-size: calc(var(--ft-size) * 1.4);
+    line-height: var(--line-height);
+    font-size: var(--r-ft-size);
     font-weight: 700; 
 }
-h3 { 
-    font-size: calc(var(--ft-size) * 1.2);
+h3 {
+    --line-height: 1.4;
+    --r-ft-size: calc(var(--ft-size) * 1.2);
+    line-height: var(--line-height); 
+    font-size: var(--r-ft-size);
     font-weight: 700; 
 }
 strong { 
-    font-size: calc(var(--ft-size) * 1); 
     font-weight: 700;
 }
 p { 
-    font-size: calc(var(--ft-size) * 1); 
+    --line-height: 1.5;
+    --r-ft-size: calc(var(--ft-size) * 1);
+    line-height: var(--line-height);
+    font-size: var(--r-ft-size); 
     font-weight: 500;
 }
 
@@ -85,7 +95,10 @@ p {
 /* Header */
 
 .header {
-    margin-bottom: calc(var(--ft-size) * 1.5);
+    margin-left: var(--body-side-margin);
+    margin-right: var(--body-side-margin);
+
+    margin-bottom: calc(var(--ft-size) * 2.5);
     display: flex;
     flex-direction: column-reverse;
 
@@ -101,6 +114,15 @@ p {
     align-self: center;
     margin-left: calc(var(--ft-size) * 1.1);
     height: calc(var(--ft-size) * 3.5);
+
+    background-image: url("/images/logo/Booki.png");
+    background-size: contain;
+    background-position: center;
+}
+.header .header__logo > img {
+    align-self: center;
+    height: calc(var(--ft-size) * 3.5);
+    opacity: 0;
 }
 
 .header .header__nav > ul {
@@ -160,7 +182,7 @@ p {
 }
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
-    body { background-color: #FF65FC;}
+
 }
 @media screen and (max-width: 768px) {
     .header {
@@ -168,13 +190,19 @@ p {
         margin-left: 0;
         margin-right: 0;
     }
-    .header > :nth-child(1) {
+    .header > :nth-child(2) {
         flex-direction: column;
         height: unset;
         gap: calc(var(--ft-size) * 1.1);
         margin-bottom: calc(var(--ft-size) * 2.5);
     }
-    .header > :nth-child(2) {
+    .header .header__logo {
+        margin: 0;
+        background-image: url("/images/logo/Booki@3x.png");
+    }
+
+
+    .header > :nth-child(1) {
         padding-left: var(--body-side-margin);
         padding-right: var(--body-side-margin);
     }
@@ -212,6 +240,8 @@ p {
     height: var(--height);
     padding: 0;
     border: none;
+
+    width: fit-content;
 
     margin-bottom: calc(var(--ft-size) * 2);;
 }
@@ -260,6 +290,8 @@ p {
 
     #search-bar {
         position: relative;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #search-bar > .search-bar__submit-btn {
@@ -267,6 +299,7 @@ p {
         border-radius: calc(var(--height) * .3);
         position: relative;
         transform: translateX(calc(var(--height) * -.3));
+        margin-right: calc(var(--height) * -.3);
     } 
 
     #search-bar > .search-bar__submit-btn::before {
@@ -437,6 +470,30 @@ p {
     aspect-ratio: 9 / 5;
     border-radius: calc(var(--ft-size) * 1.5) calc(var(--ft-size) * 1.5) 0 0;
 }
+
+
+/* .card .card__title {
+    --nb_lines: 2;
+
+    max-height: calc(var(--r-ft-size) * var(--line-height) * var(--nb_lines));
+
+    position: relative;
+    overflow: hidden;
+}
+.card .card__title::after {
+    content: "";
+    display: block;
+    position: absolute;
+
+    top: calc(var(--r-ft-size) * var(--line-height) * (var(--nb_lines) - 1));
+    left: 0;
+    right: 0;
+
+    height: calc(var(--r-ft-size) * var(--line-height));
+
+    background: linear-gradient(135deg, transparent 25%, white);
+} */
+
 
 .card .card__title,
 .card .card__info > * {
@@ -810,4 +867,3 @@ footer a:hover {
         gap: calc(var(--ft-size) * 2.5);
     }
 }
-
