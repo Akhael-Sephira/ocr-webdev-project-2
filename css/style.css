@@ -248,6 +248,7 @@ p {
 #search-bar > .search-bar__loc-btn {
     background-color: var(--clr-bg);
     width: var(--height);
+    min-width: var(--height);
 
     border: none;
     border-end-start-radius: calc(var(--height) * .3);
@@ -264,6 +265,10 @@ p {
     border-top: solid var(--clr-bg) calc(var(--ft-size) * .15);
     border-bottom: solid var(--clr-bg) calc(var(--ft-size) * .15);
     padding-left: calc(var(--ft-size) * .8);
+
+    min-width: calc(var(--ft-size) * 3);
+    width: 100%;
+    max-width: calc(var(--ft-size) * 15);
     
     font-weight: 700;
 }
