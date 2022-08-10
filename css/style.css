@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&display=swap');
 
 :root {
     --ft-size: 16px;
@@ -56,7 +56,7 @@ h1 {
     --r-ft-size: calc(var(--ft-size) * 1.6); 
     line-height: var(--line-height);
     font-size: var(--r-ft-size); 
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: calc(var(--ft-size) * .75);
 }
 h2 { 
@@ -64,17 +64,17 @@ h2 {
     --r-ft-size: calc(var(--ft-size) * 1.4);
     line-height: var(--line-height);
     font-size: var(--r-ft-size);
-    font-weight: 700; 
+    font-weight: 800; 
 }
 h3 {
     --line-height: 1.4;
     --r-ft-size: calc(var(--ft-size) * 1.2);
     line-height: var(--line-height); 
     font-size: var(--r-ft-size);
-    font-weight: 700; 
+    font-weight: 800; 
 }
 strong { 
-    font-weight: 700;
+    font-weight: 800;
 }
 p { 
     --line-height: 1.5;
@@ -98,10 +98,14 @@ p {
     margin-left: var(--body-side-margin);
     margin-right: var(--body-side-margin);
 
-    margin-bottom: calc(var(--ft-size) * 2.5);
+    margin-bottom: calc(var(--ft-size) * 1.5);
     display: flex;
     flex-direction: column-reverse;
 
+}
+
+.header h1 {
+    margin-bottom:  calc(var(--ft-size) * .4);
 }
 
 .header > :nth-child(2) {
@@ -488,14 +492,6 @@ p {
 
 */
 
-.card .card__title {
-    font-size: clamp(
-        0px, 
-        calc(var(--r-ft-size) * 50%), 
-        100px
-    );
-}
-
 .card .card__info {
     display: flex;
     gap: 0 calc(var(--ft-size) * .3);
@@ -508,7 +504,7 @@ p {
 
     display: flex;
     flex-direction: column;
-    gap: calc(var(--ft-size) * .5);
+    gap: calc(var(--ft-size) * .15);
 
     overflow: hidden;
 }
@@ -580,7 +576,7 @@ p {
 .card.card--side >:last-child {
     max-width: 60%;
     position: relative;
-    padding-bottom: calc(var(--ft-size) * 2);
+    padding-bottom: calc(var(--ft-size) * 4);
 }
 .card.card--side .note {
     position: absolute;
