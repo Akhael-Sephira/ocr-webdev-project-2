@@ -115,7 +115,7 @@ p {
     margin-left: calc(var(--ft-size) * 1.1);
     height: calc(var(--ft-size) * 3.5);
 
-    background-image: url("/images/logo/Booki.png");
+    background-image: url("../images/logo/Booki.png");
     background-size: contain;
     background-position: center;
 }
@@ -198,7 +198,7 @@ p {
     }
     .header .header__logo {
         margin: 0;
-        background-image: url("/images/logo/Booki@3x.png");
+        background-image: url("../images/logo/Booki@3x.png");
     }
 
 
@@ -472,34 +472,23 @@ p {
 }
 
 
-/* .card .card__title {
-    --nb_lines: 2;
-
-    max-height: calc(var(--r-ft-size) * var(--line-height) * var(--nb_lines));
-
-    position: relative;
-    overflow: hidden;
-}
-.card .card__title::after {
-    content: "";
-    display: block;
-    position: absolute;
-
-    top: calc(var(--r-ft-size) * var(--line-height) * (var(--nb_lines) - 1));
-    left: 0;
-    right: 0;
-
-    height: calc(var(--r-ft-size) * var(--line-height));
-
-    background: linear-gradient(135deg, transparent 25%, white);
-} */
-
+/* truncate text
 
 .card .card__title,
 .card .card__info > * {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+} 
+
+*/
+
+.card .card__title {
+    font-size: clamp(
+        0px, 
+        calc(var(--r-ft-size) * 50%), 
+        100px
+    );
 }
 
 .card .card__info {
